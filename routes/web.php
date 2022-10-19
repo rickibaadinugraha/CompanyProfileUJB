@@ -5,6 +5,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ConfirmationController;
+use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\PaymentController;
 
 /*
@@ -26,7 +27,7 @@ Route::get('/',[PagesController::class, 'welcome'])->name('welcome');
 
 
 Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
+    // Voyager::routes();
 });
 
 
@@ -51,7 +52,15 @@ Route::post('/checkout',[CheckoutController::class, 'store'])->name('checkout.st
 //Confrirmaton rout
 Route::get('/confirmation',[ConfirmationController::class, 'index'])->name('confirmation.index');
 
-//TO make Auth work add <script src="{{ asset('js/app.js') }}" defer></script> to app.blade.php 
+// pagination
+Route::get('/pertamina', [PaginationController::class, 'pertamina'])->name('pertamina');
+Route::get('/shell', [PaginationController::class, 'shell'])->name('shell');
+Route::get('/bpakr', [PaginationController::class, 'bpakr'])->name('bpakr');
+Route::get('/total', [PaginationController::class, 'total'])->name('total');
+Route::get('/vivo', [PaginationController::class, 'vivo'])->name('vivo');
+
+
+//TO make Auth work add <script src="{{ asset('js/app.js') }}" defer></script> to app.blade.php
 // Auth::routes();
 Route::middleware('auth')->group(function (){});
 

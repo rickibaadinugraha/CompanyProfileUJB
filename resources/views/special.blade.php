@@ -2,42 +2,34 @@
 
 @section('content')
 <section class="slider_section">
-   <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
-      <div class="carousel-inner">
-         <div class="carousel-item active">
-            <img class="first-slide" src="images/banner.jpg" alt="First slide">
-            <div class="container">
-               <div class="carousel-caption relative">
-                  <span>All New Phones </span>
-                  <h1>up to 25% Flat Sale</h1>
-                  <p>It is a long established fact that a reader will be distracted by the readable content
-                     <br> of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
-                  <a class="buynow" href="#">Buy Now</a>
-
-               </div>
+    <div id="project" class="project">
+        <div class="container">
+            <div class="row pdn-top-30">
+                <div class="col-md-12">
+                    <div class="headinga ">
+                        <h3>Our Projects</h3>
+                    </div>
+                    <div class="menu-area">
+                        <div class="limit-box">
+                            <menu class="main-content">
+                                <ul class="menu-content">
+                                    <li class="active"> <a href="{{route('pertamina')}}">Pertamina</a> </li>
+                                    <li><a href="{{route('shell')}}">Shell</a> </li>
+                                    <li><a href="{{route('brand')}}">BP AKR</a></li>
+                                    <li><a href="{{route('special')}}">Total</a></li>
+                                    <li><a href="{{route('contact')}}">Vivo Energy</a></li>
+                                </ul>
+                            </menu>
+                        </div>
+                    </div>
+                    <main class="py-4">
+                        @yield('content-project')
+                    </main>
+                </div>
+                </div>
             </div>
-         </div>
-         <div class="carousel-item">
-            <img class="second-slide" src="images/banner1.png" alt="Second slide">
-            <div class="container">
-               <div class="carousel-caption relative">
-                  <span>All New Phones </span>
-                  <h1>up to 50% Flat Sale</h1>
-                  <p>It is a long established fact that a reader will be distracted by the readable content
-                     <br> of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
-                  <a class="buynow" href="#">Buy Now</a>
-
-               </div>
-            </div>
-         </div>
-
-      </div>
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-         <i class='fa fa-angle-left'></i>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-         <i class='fa fa-angle-right'></i>
-      </a>
-   </div>
+        </div>
+    </div>
+    </div>
 </section>
 @endsection

@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
 
     <!-- Scripts -->
 
@@ -53,7 +53,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -104,7 +103,7 @@
                             <div class="full">
                                 <div class="center-desk">
                                     <div class="logo">
-                                        <a href="/"><img src="/images/logo.png" alt="#"></a>
+                                        <a href="/"><img src="/images/logo-ujb.png" alt="#"></a>
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +116,7 @@
                                             <li class="active"> <a href="{{route('welcome')}}">Home</a> </li>
                                             <li><a href="{{route('about')}}">About</a> </li>
                                             <li><a href="{{route('brand')}}">Brand</a></li>
-                                            <li><a href="{{route('special')}}">Specials</a></li>
+                                            <li><a href="{{route('pertamina')}}">Project</a></li>
                                             <li><a href="{{route('contact')}}">Contact Us</a></li>
                                             <li><a href="{{route('cart.index')}}">Cart ({{Cart::count()}})</a></li>
                                             <li class="last">
@@ -131,12 +130,12 @@
                         <div class="col-md-6 offset-md-6">
                             <div class="location_icon_bottum">
                                 <ul>
-                                    <li><img src="/icon/call.png" />(+71)9876543109</li>
-                                    <li><img src="/icon/email.png" />demo@gmail.com</li>
+                                    <li><img src="/icon/call.png" />081288214401</li>
+                                    <li><img src="/icon/email.png" />rickybaadi03@gmail.com</li>
                                     <li><img src="/icon/loc.png" />Location</li>
                                 </ul>
                             </div>
-                        </div></br>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -146,6 +145,10 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <main class="py-4">
+            @yield('content-project')
+        </main>
+
 
         <footer>
             <div id="contact" class="footer">
@@ -155,14 +158,15 @@
                             <div class="footer-box">
                                 <div class="headinga">
                                     <h3>Address</h3>
-                                    <span>Healing Center, 176 W Streetname,New York, NY 10014, US</span>
-                                    <p>(+71) 8522369417
-                                        <br>demo@gmail.com</p>
+                                    <span>Jl Indokarya II Blok G No 1
+                                        Papanggo, Tanjung Priok, Jakarta Utara </span>
+                                    <p>(+62) 81288214401
+                                        <br>rickybaadi03@gmail.com</p>
                                 </div>
                                 <ul class="location_icon">
-                                    <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                    <li> <a href="https://www.facebook.com/ricki.nugraha.313/"><i class="fa fa-facebook-f"></i></a></li>
                                     <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li> <a href="https://www.instagram.com/rickek_/?hl=id"><i class="fa fa-instagram"></i></a></li>
                                 </ul>
                                 <div class="menu-bottom">
                                     <ul class="link">
@@ -179,7 +183,7 @@
                 </div>
                 <div class="copyright">
                     <div class="container">
-                        <p>© 2019 All Rights Reserved. Design By<a href="https://html.design/"> Free Html Templates</a></p>
+                        <p>© 2022 All Rights Reserved. Design By<a href="https://www.instagram.com/rickek_/?hl=id"> Ricki Ba'adi Nugraha</a></p>
                     </div>
                 </div>
             </div>
